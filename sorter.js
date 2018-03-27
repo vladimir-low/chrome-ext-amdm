@@ -13,10 +13,11 @@ function songHighlight() {
       return $(this).text().toLowerCase().indexOf(storage.song.toLowerCase()) >= 0;
     }).first();
     if (0 === result.text().length) {
-      alert('WARNING: No songs found!');
+      alert('WARNING: No song matching "' + storage.song + '" found!');
     } else {
       result.css('background-color', 'red');
+      $('html, body').animate({scrollTop: parseInt(result.offset().top)}, 2000);
     }
   });
 }
-setTimeout(songHighlight, '3000'); // Wait a bit for sorting to take place
+setTimeout(songHighlight, '2000'); // Wait a bit for sorting to take place

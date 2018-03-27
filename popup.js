@@ -1,8 +1,7 @@
 function openAmdm(band, song) {
-  var base_url = "https://amdm.ru/";
+  var base_url = "";
   if (band) {
-    var complete_url = base_url + 'akkordi/' + band
-    chrome.tabs.update({url: complete_url});
+    chrome.tabs.update({url: 'https://amdm.ru/akkordi/'+band});
   };
   chrome.tabs.onUpdated.addListener(function(tabId, changeInfo, tab) {
     if (changeInfo.status == 'complete') {
