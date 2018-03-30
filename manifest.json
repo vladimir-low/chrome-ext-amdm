@@ -2,7 +2,7 @@
   "manifest_version": 2,
   "name": "Amdmd tabs searcher",
   "description": "This extension allows the user to search the highly viewed tabs on amdm.ru",
-  "version": "0.1",
+  "version": "0.2",
 
   "browser_action": {
     "default_icon": "amdm_icon.png",
@@ -12,6 +12,6 @@
   "permissions": [
     "tabs",
     "storage",
-    "<all_urls>"
+    "https://amdm.ru/*"
   ]
 }

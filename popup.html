@@ -13,6 +13,12 @@
       h1 {
         font-size: 15px;
       }
+     .datalist {
+        height: 50px !important;
+        max-height: 200px !important;
+        overflow: scroll;
+        overflow-x: hidden;
+      }
       #container {
         align-items: center;
         display: block;
@@ -25,10 +31,16 @@
     <h1>Amdm Searcher</h1>
     <div id="container">
       <span>Band:</span>
-      <input type="text" id="band"><br>
+      <input type="text" id="band" list="bandList"><br>
       <span>Song:</span>
-      <input type="text" id="song"><br>
+      <input type="text" id="song" list="songList"><br>
       <button type="button">Search!</button>
     </div>
+    <datalist class="datalist" id="bandList">
+      <!-- options are filled in popup.js -->
+    </datalist>
+    <datalist class="datalist" id="songList">
+      <!-- options are filled in popup.js -->
+    </datalist>
   </body>
 </html>
